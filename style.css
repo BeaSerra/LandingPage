@@ -141,31 +141,28 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Título Principal */
 .titulo-sessao {
     color: #7b1c2a;
     font-size: 2rem;
     margin-bottom: 30px;
-    text-align: left; /* Alinhado à esquerda como o seu título2 antigo */
+    text-align: left; 
 }
 
-/* Grid/Flex que segura os 4 cards */
 .cards-container {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
 }
 
-/* Estilo Individual de cada Card */
 .card-item {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 25px 20px;
     flex: 1;
-    min-width: 230px; /* Garante que os cards não fiquem espremidos */
+    min-width: 230px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-top: 4px solid #7b1c2a; /* Detalhe com a cor do seu tema */
+    border-top: 4px solid #7b1c2a; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,19 +170,16 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Efeito sutil ao passar o mouse */
 .card-item:hover {
     transform: translateY(-5px);
 }
 
-/* Estilo dos Ícones */
 .card-icone {
     font-size: 2.5rem;
     color: #7b1c2a;
     margin-bottom: 15px;
 }
 
-/* Título interno do Card */
 .card-titulo {
     color: #111111;
     font-size: 1.2rem;
@@ -193,16 +187,14 @@ body {
     font-weight: bold;
 }
 
-/* Texto interno do Card */
 .card-texto {
     font-size: 0.95rem;
     line-height: 1.5;
     color: #444444;
     margin: 0;
-    text-align: justify; /* Mantém o padrão de justificado do seu layout original */
+    text-align: justify; 
 }
 
-/* Responsividade para Celulares */
 @media (max-width: 768px) {
     .cards-container {
         flex-direction: column;
@@ -221,8 +213,6 @@ body {
     gap: 30px;
     margin-left: -40px;
     margin-right: -40px;
-
-
 }
 
 .ebook-imagens {
@@ -378,7 +368,6 @@ footer {
     padding: 30px;
     line-height: 1.6;
 }
-
 
 #counter{
     font-size: 14px;

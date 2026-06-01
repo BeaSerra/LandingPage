@@ -126,7 +126,6 @@ Duis molestie ipsum enim. Sed venenatis sed sem eget gravida. Phasellus ac eros 
            
         ];
 
-        // 2. DEPOIS executamos a lógica para criar os elementos na tela
         const faqContainer = document.getElementById('faq-container');
 
         cards.forEach(card => {
@@ -138,7 +137,6 @@ Duis molestie ipsum enim. Sed venenatis sed sem eget gravida. Phasellus ac eros 
             contentDiv.className = 'content';
             
             card.subtopics.forEach(sub => {
-                // Só cria o subtópico se ele tiver título ou conteúdo
                 if(sub.title || sub.content) {
                     const subDiv = document.createElement('div');
                     subDiv.className = 'subtopic';
