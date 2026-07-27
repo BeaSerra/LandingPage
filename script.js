@@ -16,11 +16,16 @@ form.addEventListener("submit", function(e) {
 
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
+    const divMensagem = document.getElementById("mensagem");
 
     if (nome === "" || email === "") {
-        document.getElementById("mensagem").innerHTML = "Preencha os campos obrigatórios.";
+        divMensagem.style.color = "#ffcccc"; 
+        divMensagem.innerHTML = "Preencha todos os campos obrigatórios.";
         return;
     }
+
+    divMensagem.style.color = "#ffffff";
+    divMensagem.innerHTML = "Processando..."; 
 
     const data = new FormData(form);
 
@@ -30,8 +35,13 @@ form.addEventListener("submit", function(e) {
     })
     .then(res => res.text())
     .then(() => {
+        divMensagem.innerHTML = "Cadastro realizado! Download iniciado.";
         alert("Cadastro realizado! Seu download vai começar.");
         window.location.href = "ebook.pdf";
+        form.reset(); 
+    })
+    .catch(err => {
+        divMensagem.style.color = "#ffcccc";
+        divMensagem.innerHTML = "Ocorreu um erro. Tente novamente.";
     });
 });
-
