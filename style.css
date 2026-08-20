@@ -5,6 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: #fcfefbc5;
 }
@@ -280,7 +285,6 @@ body {
     outline: none;
 }
 
-
 .formulario input:focus {
     border-color: #bdab8bca;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -290,13 +294,15 @@ body {
     width: 100%;
     padding: 15px;
     background: white;
-    color: #7b1c2a;
+    color: #7b1c2a !important; 
     border: none;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1rem;
     transition: all 0.3s;
     cursor: pointer;
+    -webkit-appearance: none; 
+    appearance: none;
 }
 
 .formulario button:hover {
@@ -384,7 +390,14 @@ footer {
 .faq-content {
     width: 100%;
     max-width: 600px;
-    margin: 20px 0;
+    margin: 20px auto;
+    padding: 0 15px; 
+    box-sizing: border-box;
+}
+
+.text-content p {
+    text-align: justify;
+    line-height: 1.6;
 }
 
 #mensagem {
@@ -392,7 +405,6 @@ footer {
     font-size: 0.9rem;
     text-align: center;
 }
-
 
 @media (max-width: 768px) {
     
@@ -412,6 +424,16 @@ footer {
         gap: 30px;
         margin: 0 -20px; 
         text-align: center;
+    }
+    
+    .ebook-imagens {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .capa, .pagina {
+        width: 140px; 
+        height: auto;
     }
 
     .titulo-sessao {
